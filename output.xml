@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230915 17:54:28.278" rpa="false" schemaversion="4">
+<suite id="s1" name="Cea" source="c:\Users\acaro\OneDrive\Área de Trabalho\PASTA TESTE\youtube\cea.robot">
+<test id="s1-t1" name="Acessar o site e criar conta" line="21">
+<kw name="Dado que o usuario acesse o site da CeA">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230915 17:54:28.604" level="INFO">Opening browser 'chrome' to base url 'https://www.cea.com.br/'.</msg>
+<status status="PASS" starttime="20230915 17:54:28.603" endtime="20230915 17:54:34.616"/>
+</kw>
+<status status="PASS" starttime="20230915 17:54:28.603" endtime="20230915 17:54:34.618"/>
+</kw>
+<kw name="E aceitar o cookies">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Cookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:34.620" level="INFO">Clicking element '//button[@id="onetrust-accept-btn-handler"]'.</msg>
+<status status="PASS" starttime="20230915 17:54:34.619" endtime="20230915 17:54:34.818"/>
+</kw>
+<status status="PASS" starttime="20230915 17:54:34.618" endtime="20230915 17:54:34.821"/>
+</kw>
+<kw name="Entao efetua o login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Click_button_Minhaconta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:34.830" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/section/div/div[3]/div/div/div/div/p[1]'.</msg>
+<status status="PASS" starttime="20230915 17:54:34.828" endtime="20230915 17:54:35.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:35.190" level="INFO">Clicking element '//div[contains(text(),"entrar")]'.</msg>
+<status status="PASS" starttime="20230915 17:54:35.187" endtime="20230915 17:54:36.900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Entrar_com_emailEsenha}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230915 17:54:36.900" endtime="20230915 17:54:37.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Entrar_com_emailEsenha}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:37.402" level="INFO">Clicking element '//div[.="Entrar com email e senha"]/span'.</msg>
+<status status="PASS" starttime="20230915 17:54:37.400" endtime="20230915 17:54:37.509"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_email}</arg>
+<arg>ana1234teste@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:37.512" level="INFO">Typing text 'ana1234teste@gmail.com' into text field 'xpath=/html/body/div[2]/div/div[1]/div/div[4]/div/div/div/div[2]/div/div/form/div[1]/label/div/input'.</msg>
+<status status="PASS" starttime="20230915 17:54:37.511" endtime="20230915 17:54:37.819"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_passoword}</arg>
+<arg>@CeA1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:37.820" level="INFO">Typing text '@CeA1234' into text field 'xpath=/html/body/div[2]/div/div[1]/div/div[4]/div/div/div/div[2]/div/div/form/div[2]/div/label/div/input'.</msg>
+<status status="PASS" starttime="20230915 17:54:37.819" endtime="20230915 17:54:37.957"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Click_confirmar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230915 17:54:37.960" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div[1]/div/div[4]/div/div/div/div[2]/div/div/form/div[4]/div/button/div/span'.</msg>
+<status status="PASS" starttime="20230915 17:54:37.958" endtime="20230915 17:54:38.029"/>
+</kw>
+<status status="PASS" starttime="20230915 17:54:34.826" endtime="20230915 17:54:38.029"/>
+</kw>
+<status status="PASS" starttime="20230915 17:54:28.600" endtime="20230915 17:54:38.030"/>
+</test>
+<status status="PASS" starttime="20230915 17:54:28.290" endtime="20230915 17:54:38.030"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cea">Cea</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
